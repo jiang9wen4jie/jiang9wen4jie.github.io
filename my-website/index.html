@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>uJack | 前端开发初学者</title>
+    <!-- 引入外部CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- 引入Font Awesome图标库（免费图标） -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+    <!-- ========== 左侧边栏（固定不动） ========== -->
+    <header id="sidebar">
+        <div class="avatar">
+            <!-- 把 avatar.jpg 放在同目录下，或改成你的图片链接 -->
+            <img src="avatar.jpg" alt="我的头像" />
+        </div>
+        <h1>uJack</h1>
+        <p class="subtitle">前端开发 · 初学者</p>
+        <p class="bio">理工大学 信息安全 · 大一</p>
+
+        <!-- 社交链接（换成你的真实账号） -->
+        <ul class="social-links">
+            <li><a href="https://github.com/jiang9wen4jie" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://space.bilibili.com/1101646203" target="_blank"><i class="fab fa-bilibili"></i></a></li>
+            <li><a href="images/wechat.jpg" target="_blank"><i class="fab fa-weixin"></i></a></li>
+        </ul>
+
+        <!-- 底部版权 -->
+       <footer class="sidebar-footer">
+    <p id="footer-time"></p>
+</footer>
+    </header>
+
+    <!-- ========== 右侧主内容（可滚动） ========== -->
+    <main id="main-content">
+
+        <!-- 区段1：关于我 -->
+        <section class="section">
+            <h2><i class="fas fa-user"></i> 关于我</h2>
+            <p>
+                你好！我是一名热爱前端的计算机专业学生。
+                2026年暑假已经系统学习 <strong>HTML5</strong> 和 <strong>CSS3</strong>，
+                这是我从零搭建的第一个个人站点。
+            </p>
+            <p>
+                我相信 <strong>「写出来的代码比简历更会说话」</strong>，
+                目前正在努力学习 JavaScript 和 Vue.js。
+            </p>
+        </section>
+
+        <!-- 区段2：技能进度条（HR最爱看！） -->
+        <section class="section">
+            <h2><i class="fas fa-code"></i> 技术掌握度</h2>
+            <div class="skill">
+                <span class="skill-name">HTML5</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:90%;">90%</div></div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">CSS3</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:80%;">80%</div></div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">JavaScript</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:20%;">20%</div></div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">Git / GitHub</span>
+                <div class="progress-bar"><div class="progress-fill" style="width:40%;">40%</div></div>
+            </div>
+        </section>
+
+        <!-- 区段3：作品集（核心说服力） -->
+        <section class="section">
+            <h2><i class="fas fa-folder-open"></i> 课程作品</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>📄 企业官网仿制</h3>
+                    <p>使用 Flexbox + Grid 布局，完全响应式</p>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                </div>
+                <div class="project-card">
+                    <h3>🧾 个人简历页面</h3>
+                    <p>纯CSS打印样式，支持暗黑模式切换</p>
+                    <span class="tag">CSS变量</span>
+                    <span class="tag">过渡</span>
+                </div>
+                <div class="project-card">
+                    <h3>📱 移动端登录页</h3>
+                    <p>仿主流APP登录界面，含表单验证样式</p>
+                    <span class="tag">表单</span>
+                    <span class="tag">伪类</span>
+                </div>
+            </div>
+        </section>
+
+<!-- 区段4：踩坑日记（杀手锏！） -->
+<section class="section">
+    <h2><i class="fas fa-book"></i> 我的踩坑日记</h2>
+
+    <article class="diary-entry">
+        <h3>💣 记一次浮动清除的血泪史</h3>
+        <p class="date">📅 2026-07-28</p>
+        <p>刚学CSS布局时，我以为加了 <code>float:left</code> 就万事大吉了。结果父容器高度直接塌陷成0，背景色全没了……</p>
+        <a href="diary1.html">阅读全文 →</a>   <!-- 👈 删掉了 target="_blank" -->
+    </article>
+
+    <article class="diary-entry">
+        <h3>🚀 Flex布局让我彻底放弃表格</h3>
+        <p class="date">📅 2026-07-25</p>
+        <p>早期我用 <code>&lt;table&gt;</code> 做导航栏，每次调整间距都要改 colspan，改一次崩溃一次，直到我遇见了 <code>display:flex</code>……</p>
+        <a href="diary2.html">阅读全文 →</a>   <!-- 👈 删掉了 target="_blank" -->
+    </article>
+
+    <article class="diary-entry">
+        <h3>🎨 背景图失踪迷案</h3>
+        <p class="date">📅 2026-07-20</p>
+        <p>明明写了 <code>background-image: url(图片.jpg)</code> 就是不显示，F12疯狂报错404。查了半天才发现是中文文件名惹的祸……</p>
+        <a href="diary3.html">阅读全文 →</a>   <!-- 👈 删掉了 target="_blank" -->
+    </article>
+</section>
+
+        <!-- 区段5：联系我（展示诚意） -->
+        <section class="section">
+            <h2><i class="fas fa-envelope"></i> 联系我</h2>
+            <p>📧 邮箱：<a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=jwj19955068142@qq.com" target="_blank">uJack@qq.com</a></p>
+            <p>🐙 GitHub：<a href="https://github.com/jiang9wen4jie" target="_blank">github.com/uJack</a></p>
+        </section>
+
+    </main>
+<script>
+    // 获取当前北京时间并显示在页脚
+    function updateTime() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+
+        const timeStr = `© ${year} uJack · 持续迭代中 · ${month}-${day} ${hours}:${minutes}:${seconds}`;
+        document.getElementById('footer-time').textContent = timeStr;
+    }
+
+    // 页面加载时立即显示一次
+    updateTime();
+
+    // 每秒更新一次（让秒数走起来）
+    setInterval(updateTime, 1000);
+</script>
+</body>
+</html>
